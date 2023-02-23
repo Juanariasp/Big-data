@@ -48,5 +48,10 @@ jobs:
             aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
             aws-session-token: ${{secrets.AWS_SESSION_TOKEN}}
             aws-region: us-east-1
+      - name: crear bucket
+        run: |
+          aws s3api create-bucket    --bucket bucketcloud920020503     --region us-east-1
+          aws s3api list-buckets
+      
 
 
